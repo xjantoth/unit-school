@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meranie vonkajšej teploty vzduchu</title>
+  <!-- Load Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Load Prism CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+
+  <!-- Load Prism JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+
+  <!-- Load the Prism Python language definition file -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+  <h1 class="text-center">Meranie vonkajšej teploty vzduchu</h1>
+
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+
+      <p class="lead">Tento kód v jazyku Python slúži na vykreslenie dátového grafu, ktorý zobrazuje vývoj vonkajšej teploty vzduchu v čase. Pre generovanie náhodných dát sa využíva knižnica random a datetime. Na vizualizáciu dát sa využívajú knižnice pygal, ktorá umožňuje vytvárať rôzne typy grafov, ako sú stĺpcové alebo čiarové grafy. Kód dokáže vygenerovať a uložiť graf vo formáte SVG pre oba typy grafov.</p>
+
+
+      <p>Použite tento Python kód.</p>
+
+      <pre><code class="language-python">
+#!/usr/bin/env python
+import random
+import datetime
+from pygal import Line, Pie, Bar, style
+
+# Vygenerujem si cas a nameranu hodnotu vzduchu
+start = datetime.datetime.today()
+merania = [(start, random.uniform(1, 20))]
+
+for i in range(20):
+    next_date = merania[-1][0] +  datetime.timedelta(minutes=random.randint(10, 70))
+    merania.append((next_date, random.uniform(1, 20)))
+
+
+# Create Bar chart
+chart = Bar(x_label_rotation=40, show_legend=False, style=style.LightSolarizedStyle) 
+chart.title = 'Meranie vonkajšej teploty vzduchu (°C)'
+chart.y_title = 'Teplota [°C]'
+chart.x_title = 'Čas merania'
+
+x_labels = [d.strftime('%Y-%m-%d %H:%M:%S') for d, _ in merania]
+chart.x_labels = x_labels
+
+# Add data to the chart
+chart.add('Meranie teploty °C', [v for _, v in merania])
+
+chart.render_to_file('meranie_vonkajsej_teploty_vzduchu_bar.svg')
+      </code></pre>
+
+
+      <h4>Stĺpcový graf vygenerovaný týmto kódom:</h4>
+
+      <div class="text-center">
+        <embed type="image/svg+xml" src="meranie_vonkajsej_teploty_vzduchu_bar.svg" style="width: 100%;" />
+      </div>
+      </br>
+      </br>
+  <h4>Čiarový graf vygenerovaný týmto kódom:</h4>
+  <p>Jednoduchou výmenou niekoľkých riadkov na konci kódu Bar(...) -> Line(...) dosiahneme zmenu typu grafu zo stĺpcového na čiarový.</p>
+      <pre><code class="language-python">
+#!/usr/bin/env python
+...
+...
+
+# Create Line chart
+chart = Line(x_label_rotation=40, show_legend=False , style=style.LightSolarizedStyle)
+chart.title = 'Meranie vonkajšej teploty vzduchu (°C)'
+chart.y_title = 'Teplota [°C]'
+chart.x_title = 'Čas merania'
+
+x_labels = [d.strftime('%Y-%m-%d %H:%M:%S') for d, _ in merania]
+chart.x_labels = x_labels
+
+# Add data to the chart
+chart.add('Meranie teploty °C', [v for _, v in merania])
+
+chart.render_to_file('meranie_vonkajsej_teploty_vzduchu_line.svg')
+      </code></pre>
+      <h5>Vysledny ciarovy graf:</h5>
+
+      <div class="text-center">
+        <embed type="image/svg+xml" src="meranie_vonkajsej_teploty_vzduchu_line.svg" style="width: 100%;" />
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Load Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+
