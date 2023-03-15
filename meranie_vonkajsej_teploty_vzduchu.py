@@ -36,7 +36,7 @@ chart.x_title = 'Čas merania'
 x_labels = [d.strftime('%Y-%m-%d %H:%M:%S') for d, _ in merania]
 chart.x_labels = x_labels
 
-# Add data to the chart s
+# Add data to the chart
 chart.add('Meranie teploty °C', [v for _, v in merania])
 
 chart.render_to_file('meranie_vonkajsej_teploty_vzduchu_line.svg')
