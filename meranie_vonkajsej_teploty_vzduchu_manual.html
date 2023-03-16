@@ -23,7 +23,7 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
 
-      <p class="lead">Tento kód v jazyku Python slúži na vykreslenie dátového grafu, ktorý zobrazuje vývoj vonkajšej/vnútornej teploty vzduchu v čase. Pre generovanie náhodných dát sa využíva knižnica random a datetime. Na vizualizáciu dát sa využívajú knižnice pygal, ktorá umožňuje vytvárať rôzne typy grafov, ako sú stĺpcové alebo čiarové grafy. Kód dokáže vygenerovať a uložiť graf vo formáte SVG pre oba typy grafov.</p>
+      <p class="lead">Tento kód v jazyku Python slúži na vykreslenie dátového grafu, ktorý zobrazuje vývoj vonkajšej/vnutornej teploty vzduchu v čase. Na vizualizáciu dát sa využívajú knižnice pygal, ktorá umožňuje vytvárať rôzne typy grafov, ako sú stĺpcové alebo čiarové grafy. Kód dokáže vygenerovať a uložiť graf vo formáte SVG pre oba typy grafov.</p>
 
 
       <p>Použite tento Python kód.</p>
@@ -95,7 +95,7 @@ chart.add(None, [priemer_tmp_vnutorna for _ in range(len(meranie_vnutorna))], co
 chart.render_to_file('meranie_manual.svg')
 
       </code></pre>
-      <h4>Vysledny čiarový graf:</h4>
+      <h5>Vysledny ciarovy graf:</h5>
 
       <div class="text-center">
         <embed type="image/svg+xml" src="meranie_manual.svg" style="width: 100%;" />
