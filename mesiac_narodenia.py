@@ -3,7 +3,7 @@ from pygal import Bar, Pie
 from collections import defaultdict
 
 chart = Bar()
-chart = Pie(inner_radius=1)
+chart = Pie(inner_radius=0.6)
 chart.title = 'Mesiac narodenia deti'
 
 chart.y_title = 'Pocetnost deti nardenych v mesiaci'

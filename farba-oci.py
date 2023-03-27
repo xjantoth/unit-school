@@ -1,6 +1,12 @@
 from pygal import Bar, Pie
 from collections import defaultdict
 
+preklad_farieb = {
+    "hneda": "brown",
+    "modra": "blue",
+    "zelena": "green"
+    }
+
 chart = Bar()
 chart = Pie(inner_radius=1)
 chart.title = 'Farba oci deti'
@@ -21,12 +27,13 @@ data = {
     "Matus": "modra"
 }
 
+
 triedime = defaultdict(list)
 for key, val in sorted(data.items()):
     triedime[val].append(key)
 
 
 for key, value in triedime.items():
-    chart.add(key, [{'value': len(value), 'label': ' '.join(value)}])
+    chart.add(key, [{'value': len(value), 'label': ' '.join(value), 'style': f'fill: {preklad_farieb.get(key, "black")};'}])
 
 chart.render_in_browser()

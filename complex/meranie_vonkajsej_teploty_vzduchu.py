@@ -40,3 +40,5 @@ chart.x_labels = x_labels
 chart.add('Meranie teploty °C', [v for _, v in merania])
 
 chart.render_to_file('meranie_vonkajsej_teploty_vzduchu_line.svg')
+chart.render_in_browser()
+

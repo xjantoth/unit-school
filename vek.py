@@ -23,8 +23,8 @@ chart.add(None, [{"label": " Vek", "value": i} for i in vek])
 
 chart.add(
         f'Priemerny  vek {priemer_vek}', 
-        [priemer_vek for _ in range(len(vek))], 
-        color='gray'
+        [{"value": priemer_vek, "label": None} for _ in range(len(vek))], 
+        stroke_style={'width': 5, 'dasharray': '3, 6', 'linecap': 'round', 'linejoin': 'round'}
         )
 
 
