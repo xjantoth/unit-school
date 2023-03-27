@@ -8,7 +8,7 @@ preklad_farieb = {
     }
 
 chart = Bar()
-chart = Pie(inner_radius=1)
+#chart = Pie(inner_radius=0.5)
 chart.title = 'Farba oci deti'
 
 chart.y_title = 'Pocetnost farby oci'
