@@ -1,0 +1,77 @@
+Pocet kruzkov deti	
+Vilko	3
+Julka	3
+Emka	4
+Livka	1
+Simon	5
+Peto	1
+Matus	3
+Zuzka	1
+Ja	  2
+Stelka 2
+	
+	
+Vek deti	
+Vilko	6
+Julka	10
+Emka	10
+Livka	12
+Simon	10
+Peto	8
+Matus	7
+Zuzka	1
+Lukas	5
+	
+	
+	
+farba oci deti	
+Vilko 	hneda
+Simon	modra
+Ema	hneda
+Laura	zelena
+Livka	hneda
+Stelka	zelena
+Peto	modra
+Julka	hneda
+Zuzka	zelena
+Matus	modra
+	
+Mesiac narodenia (Petko)	
+Petko	Januar
+Vilko	Marec
+Zuzka	September
+Simon	Januar
+Matus	Oktober
+Stelka	November
+Ema	November
+Julka	April
+Laura	Marec
+Livka	Februar
+	
+Hmotnost deti (skolka) kg	
+Timi	13,4
+Filip	12,9
+Swenn	17,6
+Ema	20,6
+Zuzka	15,9
+Tanicka	16,4
+Beatka	12,4
+Lubka	20,7
+Alicka	14,2
+Simi	0
+Miska	0
+
+hmotnost deti	 (skola) kg
+Vilko	21,30
+Julka	37,20
+Emka	29,70
+Livka	27,70
+Simon	30,00
+Peto	35,80
+Matus	22,70
+Zuzka	54,60
+Lukas	0,00
+Vilko	21,30
+Stelka	24,50
+Laura	26,90
+	
