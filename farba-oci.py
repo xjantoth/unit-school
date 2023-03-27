@@ -34,6 +34,14 @@ for key, val in sorted(data.items()):
 
 
 for key, value in triedime.items():
-    chart.add(key, [{'value': len(value), 'label': ' '.join(value), 'style': f'fill: {preklad_farieb.get(key, "black")};'}])
+    chart.add(
+            key, 
+            [
+                {'value': len(value), 
+                 'label': ' '.join(value), 
+                 'style': f'fill: {preklad_farieb.get(key, "black")};'
+                 }
+            ]
+            )
 
 chart.render_in_browser()
